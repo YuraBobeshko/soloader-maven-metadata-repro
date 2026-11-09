@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application' version '8.12.0'
+}
+
+android {
+    namespace 'com.example.soloaderrepro'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.example.soloaderrepro'
+        minSdk 23
+        targetSdk 36
+    }
+}
+
+def soloaderVersion = providers.gradleProperty('soloaderVersion').orElse('0.10.4+')
+
+dependencies {
+    implementation "com.facebook.soloader:soloader:${soloaderVersion.get()}"
+}
