@@ -13,7 +13,7 @@ android {
     }
 }
 
-def soloaderVersion = providers.gradleProperty('soloaderVersion').orElse('0.10.4+')
+def soloaderVersion = providers.gradleProperty('soloaderVersion').orElse('0.10.4')
 
 dependencies {
     implementation "com.facebook.soloader:soloader:${soloaderVersion.get()}"
